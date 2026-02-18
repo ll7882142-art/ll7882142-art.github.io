@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AURUM MOTORS • Luxury Cars</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__note">Worldwide Delivery • Premium Warranty • VIP Support</div>
+      <div class="topbar__right">
+        <a href="#contact" class="topbar__link">Contact</a>
+        <a href="#inventory" class="topbar__link">Inventory</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark">A</span>
+        <span class="brand__text">AURUM MOTORS</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#inventory">Inventory</a>
+        <a href="#features">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn--sm">Book a Test Drive</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="badge">Luxury • Performance • Exclusivity</p>
+        <h1>Drive the <span class="gold">extraordinary</span>.</h1>
+        <p class="lead">
+          Curated selection of premium vehicles with transparent pricing, concierge delivery,
+          and VIP aftercare.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#inventory">Explore Inventory</a>
+          <a class="btn btn--ghost" href="#contact">Get a Quote</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num">250+</div>
+            <div class="stat__label">Luxury Cars</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">4.9/5</div>
+            <div class="stat__label">Client Rating</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">24/7</div>
+            <div class="stat__label">Concierge</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="hero__image" role="img" aria-label="Luxury car"></div>
+
+        <div class="hero__panel">
+          <div class="hero__panel-row">
+            <div>
+              <div class="muted">Featured</div>
+              <div class="title">Aurum GT • 2026</div>
+            </div>
+            <div class="price">$189,000</div>
+          </div>
+          <div class="chips">
+            <span class="chip">V8</span>
+            <span class="chip">0-100: 3.4s</span>
+            <span class="chip">AWD</span>
+            <span class="chip">Premium</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inventory -->
+  <section class="section" id="inventory">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>Inventory</h2>
+          <p class="muted">Handpicked luxury cars — updated weekly.</p>
+        </div>
+
+        <div class="filters">
+          <button class="pill is-active" data-filter="all">All</button>
+          <button class="pill" data-filter="sport">Sport</button>
+          <button class="pill" data-filter="suv">SUV</button>
+          <button class="pill" data-filter="electric">Electric</button>
+          <button class="pill" data-filter="sedan">Sedan</button>
+        </div>
+      </div>
+
+      <div class="grid" id="carGrid">
+        <!-- Card 1 -->
+        <article class="card" data-type="sport">
+          <div class="card__media media--1"></div>
+          <div class="card__body">
+            <div class="card__top">
+              <h3>Aurum GT</h3>
+              <span class="tag">Sport</span>
+            </div>
+            <p class="muted">V8 • 3.4s • 610 hp • Carbon pack</p>
+            <div class="card__bottom">
+              <div class="card__price">$189,000</div>
+              <button class="btn btn--sm btn--ghost" data-open="modal" data-car="Aurum GT">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" data-type="suv">
+          <div class="card__media media--2"></div>
+          <div class="card__body">
+            <div class="card__top">
+              <h3>Velvet X7</h3>
+              <span class="tag">SUV</span>
+            </div>
+            <p class="muted">Twin Turbo • 7 seats • Panoramic roof</p>
+            <div class="card__bottom">
+              <div class="card__price">$122,900</div>
+              <button class="btn btn--sm btn--ghost" data-open="modal" data-car="Velvet X7">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" data-type="electric">
+          <div class="card__media media--3"></div>
+          <div class="card__body">
+            <div class="card__top">
+              <h3>Silk E-One</h3>
+              <span class="tag">Electric</span>
+            </div>
+            <p class="muted">530 km range • Fast charge • AWD</p>
+            <div class="card__bottom">
+              <div class="card__price">$98,500</div>
+              <button class="btn btn--sm btn--ghost" data-open="modal" data-car="Silk E-One">Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" data-type="sedan">
+          <div class="card__media media--4"></div>
+          <div class="card__body">
+            <div class="card__top">
+              <h3>Onyx S-Class</h3>
+              <span class="tag">Sedan</span>
+            </div>
+            <p class="muted">Luxury interior • Adaptive suspension</p>
+            <div class="card__bottom">
+              <div class="card__price">$156,000</div>
+              <button class="btn btn--sm btn--ghost" data-open="modal" data-car="Onyx S-Class">Details</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section section--alt" id="features">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>VIP Services</h2>
+          <p class="muted">Everything you need — before & after you buy.</p>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <div class="icon">✦</div>
+          <h3>Concierge Delivery</h3>
+          <p class="muted">Door-to-door delivery with professional handover and paperwork.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">⟡</div>
+          <h3>Financing & Leasing</h3>
+          <p class="muted">Flexible premium plans with transparent monthly options.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">⟠</div>
+          <h3>Inspection & Warranty</h3>
+          <p class="muted">Multi-point inspection and extended warranty packages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__left">
+        <h2>About Aurum Motors</h2>
+        <p class="muted">
+          We curate exceptional vehicles from trusted sources, ensuring premium condition,
+          verified history, and a refined buying experience.
+        </p>
+
+        <div class="about__bullets">
+          <div class="bullet">✓ Verified vehicle history</div>
+          <div class="bullet">✓ Premium detailing & protection</div>
+          <div class="bullet">✓ Worldwide shipping</div>
+        </div>
+      </div>
+
+      <div class="about__right">
+        <div class="quote">
+          <p>
+            “Aurum made everything effortless — from selecting the car to delivery.
+            Truly premium service.”
+          </p>
+          <div class="muted">— Client Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section--alt" id="contact">
+    <div class="container contact">
+      <div class="contact__left">
+        <h2>Book a Test Drive</h2>
+        <p class="muted">Tell us what you want — we’ll reply with options and availability.</p>
+
+        <div class="contact__info">
+          <div><span class="muted">Email:</span> sales@aurummotors.com</div>
+          <div><span class="muted">Phone:</span> +20 000 000 000</div>
+          <div><span class="muted">Location:</span> Cairo • Worldwide</div>
+        </div>
+      </div>
+
+      <form class="form" id="leadForm">
+        <div class="row">
+          <label>
+            Full Name
+            <input required name="name" placeholder="Your name"/>
+          </label>
+          <label>
+            Phone
+            <input required name="phone" placeholder="+20..."/>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            Email
+            <input required type="email" name="email" placeholder="you@email.com"/>
+          </label>
+          <label>
+            Interested In
+            <select name="car">
+              <option>Aurum GT</option>
+              <option>Velvet X7</option>
+              <option>Silk E-One</option>
+              <option>Onyx S-Class</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Message
+          <textarea name="message" rows="4" placeholder="Budget, model, timeline..."></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send Request</button>
+        <p class="muted tiny" id="formMsg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="muted">© <span id="year"></span> Aurum Motors. All rights reserved.</div>
+      <div class="footer__links">
+        <a href="#about">Company</a>
+        <a href="#inventory">Inventory</a>
+        <a href="#contact">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="modal"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal__head">
+        <h3 id="modalTitle">Car Details</h3>
+        <button class="modal__x" data-close="modal" aria-label="Close">✕</button>
+      </div>
+      <div class="modal__body" id="modalBody"></div>
+      <div class="modal__foot">
+        <a class="btn btn--sm" href="#contact" data-close="modal">Request Offer</a>
+        <button class="btn btn--sm btn--ghost" data-close="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
